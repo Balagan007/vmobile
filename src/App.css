@@ -1,32 +1,112 @@
 .App {
   text-align: center;
+  box-sizing: border-box;
+  height: 100vh !important; 
+  width: 100vw !important;
+  position: relative;
+  bottom: 0;
+  background: lightgray;
+  font-size: 0.8rem;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App-column {
+  flex-direction: row;
+  justify-content: left;
+  align-items: left;
+  overflow: hidden;
+  position: sticky;
+  background-color: lightgray;
+  border: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App-row {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  overflow: hidden;
+  border: none;
+  background-color: lightgray;
+  padding-bottom: 20px;
+}
+
+.App-row-comp {
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  border: none;
+  background-color: none;
+}
+.App-row-totalSplit{
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  border: none;
+  background-color: lightgray;
+  height:100vh;
+}
+.App-column-menu{
+  flex-direction: row;
+  justify-content: left;
+  align-items: left;
+  overflow: scroll;
+  position: sticky;
+  background-color: white;
+  border: none;
+  width: 15vw;
+  min-width:170px;
+}
+.App-logo-latest{
+  text-align: center;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 10%;
 }
 
-.App-link {
-  color: #61dafb;
+.App-menu{
+  text-align: center;
+  color: rgb(30,144,255);
+  font-weight: bold;
+  padding-bottom: 2vh;
+  padding-top: 2vh;
+  font-size: 0.9rem;
 }
+
+.App-signOut-div{
+  position:absolute;
+  bottom:0;
+  margin-bottom:3vh;
+  width:15vw;
+}
+.App-signOut-button{
+  width:10vw;
+  padding:1vh 1vw;
+  font-weight: bold;
+  background:rgb(30,144,255);
+  cursor:pointer;
+  color:white;
+  border:none;
+  min-width: 100px;
+}
+.App-column-mainDiv{
+  flex-direction: row;
+  justify-content: left;
+  align-items: left;
+  overflow: scroll;
+  position: sticky;
+  background-color: lightgray;
+  border: none;
+  width: 85vw;
+  min-width:600px;
+}
+.App-button{
+  text-align: left;
+  color: rgb(5, 161, 252);
+  width: 100%;
+
+}
+
 
 @keyframes App-logo-spin {
   from {
@@ -35,4 +115,313 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.doughnut-data{
+  color: blue
+}
+
+.popup-box {
+  position: fixed;
+  background: #00000050;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+ 
+.box {
+  position: relative;
+  width: 70vw;
+  margin: 0 auto;
+  margin-left: 25vw;
+  margin-right: 5vw;
+  height: 80%;
+  margin-top: calc(100vh - 85vh - 20px);
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  border: 1px solid #999;
+  overflow: scroll;
+}
+ 
+.close-icon {
+  content: 'x';
+  cursor: pointer;
+  position: fixed;
+  right: 3vw;
+  top: calc(100vh - 85vh - 19px);
+  background: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  line-height: 20px;
+  text-align: center;
+  border: 1px solid #999;
+  font-size: 18px;
+  color: blue;
+  border-color:white;
+}
+.label svg {
+  width: 1em;
+}
+/*****DASHBOARD******/
+.Dashboard-select-label{
+  flex-direction: row;
+  justify-content: left;
+  align-items: left;
+  overflow: scroll;
+  position: sticky;
+  background-color: lightgray;
+  border: none;
+  width: 9vw;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:gray;
+  font-weight: bold;
+}
+
+.Dashbooard-select-dropdown{
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+  position: sticky;
+  background-color: lightgray;
+  border: none;
+  width: 34vw;
+}
+
+.Dashboard-charts{
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+  position: sticky;
+  background-color: white;
+  border: none;
+  width: 28vw;
+  margin-top:2vh;
+  margin-bottom: 2vh;
+  border-radius:10%;
+}
+.Dashboard-menu{
+ background: yellow;
+ cursor: pointer;
+}
+
+.Dashboard-menu:active{
+  background: rgb(30,144,255);
+}
+
+.Dashboard-menu:focus{
+  background: rgb(30,144,255);
+}
+
+.student-button{
+  background: white;
+  color: black;
+  cursor: pointer;
+  /*opacity:0.6;
+  cursor: pointer;
+  /*border: 2px solid rgb(30,144,255);*/
+  border:none;
+  /*box-shadow:  -3px 3px rgb(30,144,255), -2px 2px rgb(30,144,255), -1px 1px rgb(30,144,255);*/
+  background-image: linear-gradient(white,white,white);
+  
+}
+
+.student-button:active{
+  background: rgb(30,144,255);
+  color:white;
+  font-weight: bold;
+  border:2px solid white;
+  box-shadow: 2px 2px 2px white;
+  
+  /*background-image: linear-gradient(-180deg, rgb(30,144,255) 0%, rgb(0,191,255) 100%);*/
+}
+
+.student-button:focus{
+  background: rgb(30,144,255);
+  color:white;
+  font-weight: bold;
+  border:2px solid white;
+  box-shadow: 2px 2px 2px white;
+  
+  /*background-image: linear-gradient(-180deg, rgb(30,144,255) 0%, rgb(0,191,255) 100%);*/
+}
+
+
+
+.Analytics-button{
+  background: white;
+}
+.Analytics-button:focus{
+  background: rgb(0, 77, 165);;
+  color: white;
+}
+.Analytics-button:active{
+  background: rgb(0, 77, 165);
+  color: white;
+}
+
+.Dashboard-button{
+  background: white;
+}
+
+.Dashboard-button:focus{
+  background: grey;
+}
+
+.Dashboard-button:active{
+  background: grey;
+}
+
+
+.react-list-select--item {
+	
+	cursor: pointer;
+	position: relative;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.react-list-select--item.is-selected {
+	-webkit-user-select: inherit;
+	-moz-user-select: inherit;
+	-ms-user-select: inherit;
+	-o-user-select: inherit;
+	user-select: inherit;
+}
+
+.react-list-select--item.is-disabled {
+	cursor: default;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+  margin: 0;
+}
+
+.react-list-select {
+	background: lightgray;
+	border: none;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+.react-list-select--item.is-selected {
+  background: rgb(30,144,255);
+  color:white;
+  font-weight: bold;
+}
+.react-list-select:focus .react-list-select--item.is-focused::before,
+.react-list-select:focus .react-list-select--item.is-focused::after {
+	content: '';
+	position: relative;
+	top: 1;
+	bottom: 1;
+	width: 2%;
+	background: green;
+}
+.react-list-select:focus .react-list-select--item.is-focused::before {
+	left: 10;
+}
+.react-list-select:focus .react-list-select--item.is-focused::after {
+	right: 0;
+}
+.react-list-select--item.is-disabled {
+	color: #afafaf;
+}
+
+.context-menu .react-list-select {
+  padding: 2.5vh;
+  background: white;
+  border:none;
+}
+.context-menu .react-list-select--item {
+  font-size: 0.9;
+  text-align: left;
+  padding: 1.5vh;
+  border:1px solid rgb(30,144,255);
+  margin-top: 1%;
+  
+}
+
+.Quizes-edit-button{
+  background: white;
+  width:70%; 
+  padding:2%; 
+  border-radius:5%/20%; 
+  background:rgb(5, 161, 252); 
+  color:white;
+  font-weight:bolder;
+  border:0.5px solid grey;
+}
+.quizes-button {
+  background: white;
+  text-align:left;
+   width:87%;
+   padding:1.5vh;
+   margin-top:1%;
+   background:none;
+   border:0.5px solid rgb(30,144,255);
+   cursor: pointer;
+}
+.quizes-button:focus{
+  background: rgb(30,144,255);
+  color:white;
+  font-weight: bold;
+}
+
+.quizes-button:active{
+  background: rgb(30,144,255);
+  color:white;
+  font-weight: bold;
+}
+
+.questions-menu .react-list-select {
+  background: white;
+  border:none;
+}
+.questions-menu .react-list-select--item {
+  font-size: 0.9;
+  text-align: left;
+  padding: 2%;
+  border:0.5px solid grey;
+  margin-top: 1%;
+  border-radius: 2%/5%;
+}
+
+input[type="checkbox"]{
+  width: 20px; /*Desired width*/
+  height: 20px; /*Desired height*/
+}
+
+.datetime {
+  background: white ;
+  font-family: 'Courier New', Courier, monospace;
+  color:black;
+  border: 1px solid rgb(13, 190, 235);
+   /*box-shadow:  -3px 3px rgb(30,144,255), -2px 2px rgb(30,144,255), -1px 1px rgb(30,144,255);*/
+   background-image: linear-gradient(rgb(30,144,255),white,white,white, white,rgb(30,144,255));
+}
+
+.assign-reassign-button {
+  background: white;
+  color: rgb(30,144,255);
+}
+
+.assign-reassign-button:active {
+  background: rgb(30,144,255);
+  color: white;
+}
+
+.assign-reassign-button:focus {
+  background: rgb(30,144,255);
+  color: white;
 }

@@ -1,0 +1,35 @@
+{
+    "quizes":[{
+        "name":"quiz1",
+        "questions":[{
+            "question":"what is the number of chambers present in the heart?",
+            "choice1":"choice1",
+            "choice2":"choice2",
+            "choice3":"choice3",
+            "choice4":"choice4",
+            "answer":"answer",
+            "id":"ques10",
+            "category":"Cardiac"
+        },
+        {
+            "question":"Question 11",
+            "choice1":"choice1",
+            "choice2":"choice2",
+            "choice3":"choice3",
+            "choice4":"choice4",
+            "answer":"answer",
+            "id":"ques11",
+            "category":"Lungs"
+        },
+        {
+            "question":"Question 12",
+            "choice1":"choice1",
+            "choice2":"choice2",
+            "choice3":"choice3",
+            "choice4":"choice4",
+            "answer":"answer",
+            "id":"ques12",
+            "category":"Cardiac"
+        }]
+    }]
+}

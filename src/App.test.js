@@ -6,3 +6,8 @@ test('renders learn react link', () => {
   const linkElement = screen.getByText(/learn react/i);
   expect(linkElement).toBeInTheDocument();
 });
+
+
+<DashBoard setSelectedClass={setSelectedClass} classList={classList} selectedClass={selectedClass}
+        selectedQuiz={selectedQuiz} setSelectedQuiz={setSelectedQuiz} quizes={quizes} exams={exams}
+        selectedExam={selectedExam} setSelectedExam={setSelectedExam} />
